@@ -1,11 +1,36 @@
-<body>
-  <div id="root"></div>
-  <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
-  <script type="text/babel">
-    const rootElement = document.getElementById('root')
-    const element = <div className="container">Hello World</div>
-    ReactDOM.render(element, rootElement)
-  </script>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a User Interface with React’s JSX syntax</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+    <!-- Babel library -->
+    <script type="text/babel">
+      const rootElement = document.getElementById("root");
+      const element = <div className='container'>Hello World 3</div>; // JSX syntax
+      ReactDOM.render(element, rootElement);
+    </script>
+  </body>
+</html>
+
+<!-- 
+const element = React.createElement(  // React.createElement() method vs. JSX syntax
+  "div",  // element type
+  { className: "container" },  // element props
+  "Hello World 3"  // element children
+);
+-->
+
+<!-- 
+const rootElement = document.getElementById("root");
+const element = ("div", {
+  className: "container",
+  children: "Hello World 3"
+});
+-->
