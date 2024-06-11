@@ -1,14 +1,49 @@
-<body>
-  <div id="root"></div>
-  <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
-  <script type="text/babel">
-    const element = (
-      <>
-        <span>Hello</span> <span>World</span>
-      </>
-    )
-    ReactDOM.render(element, document.getElementById('root'))
-  </script>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Render two elements side-by-side with React Fragments</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+    <script type="text/babel">
+      const element = (
+        <>
+          <span>Hello</span> <span>World 5</span>
+        </>
+      );
+      ReactDOM.render(element, document.getElementById("root"));
+    </script>
+  </body>
+</html>
+
+<!-- React.createElement() vs. JSX
+const helloElement = React.createElement('span', null, 'Hello');
+const worldElement2 = React.createElement('span', null, 'World 5');
+const element = React.createElement(React.Fragment, null, helloElement, " ", worldElement2)
+ReactDOM.render(element, document.getElementById('root')
+);  
+
+-->
+
+<!-- React Fragments (JSX)
+const element = (
+  <React.Fragment>
+    <span>Hello</span> <span>World 5</span>
+  </React.Fragment>
+);
+);
+-->
+
+<!-- React Fragments (JSX)
+const element = (
+  <>
+    <span>Hello</span> <span>World 5</span>
+  </>
+);
+);
+-->
